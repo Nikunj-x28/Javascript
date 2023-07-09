@@ -1,0 +1,22 @@
+.container{
+    box-sizing: border-box;
+    border: 2px solid black;
+    text-align: center;
+    margin-top: 200px;
+    margin-inline: auto;
+    border-radius: 10px;
+    min-height:200px;
+    width:60%;
+}
+.oneline{
+    text-align:center;
+    display: inline-block;
+    width:100%;
+    font-size: 50px;
+    padding-top:10px;
+    padding-bottom: 20px;
+}
+.box{
+    padding-inline: 20px;
+    font-size: 18px;
+}
