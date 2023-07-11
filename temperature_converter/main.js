@@ -4,6 +4,7 @@ document.getElementById("submit_button").onclick = function (){
     let temp;
     if(document.getElementById("celsius").checked){
             temp = document.getElementById("Temperature").value;
+            // implicit type cast happened in toCelsius function but i should have done it explicitily
             temp = toCelsius(temp);
             document.getElementById("final_temp").innerHTML = `Temperature in Celsius is ${temp} degree Celsius`;
     }
@@ -16,11 +17,6 @@ document.getElementById("submit_button").onclick = function (){
         document.getElementById("final_temp").innerHTML = "Select a unit";
     }
 }
-
-
-
-
- 
 function toCelsius(temperature){
       return (temperature - 32) * (5 / 9);
 }
