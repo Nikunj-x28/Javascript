@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Projects</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <p>YouTube Subscribe Button</p>
-    <button onclick="
-    subscribe();
-    " class="js-subscribe-button">
-        Subscribe          // if we had used innerHTML instead of innerText then the spaces will also be compared
-                          // and thus if condition would never have been true
+    <button
+    onclick=" subscribe(); " 
+    class="js-subscribe-button subscribe-button">
+       Subscribe            <!-- if we had used innerHTML instead of innerText then the spaces will also be compared -->
+                            <!--  and thus if condition would never have been true -->
     </button>
-
-    <script>
-        function subscribe(){
-                const buttonElement = document.querySelector('.js-subscribe-button');
-                if(buttonElement.innerText === 'Subscribe'){
-                    buttonElement.innerHTML = 'Subscribed';
-                }
-                else{
-                    buttonElement.innerHTML = 'Subscribe';
-                }
-        }
-    </script>
+    <p>Amazon Shopping Calculator</p>
+    <input type="text" placeholder="enter the cost" class="js-cost-input cost-input"
+    onkeydown=" handleCostKeydown(); ">
+    <button 
+    onclick=" calculateTotal(); " class="calc-button">
+    Calculate</button>
+    <p class="js-total-cost"></p>
+    <input type="text" class="js-mimic-input" onkeyup=" mimic(); ">
+    <p class="js-mimic"></p>
+    
+    <script src="main.js">  </script>
 </body>
 </html>

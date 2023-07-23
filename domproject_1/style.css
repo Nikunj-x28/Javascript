@@ -1,0 +1,28 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+.subscribe-button{
+    border-radius:40px;
+    border: none;
+    color: white;
+    background-color: black;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.is-sub{
+    color: black;
+    background-color: rgb(240,240,240);
+}
+.cost-input{
+    padding: 5px;
+    padding-left:10px;
+    text-transform: capitalize;
+}
+.calc-button{
+    padding: 7px 9px;
+    background-color: rgb(47, 151, 47);
+    color: white;
+    border: none;
+    cursor:pointer;
+}
