@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+        <!-- play buttons start -->
+    <div class="container">
+            <button onclick = " playRPS('Rock') "
+            class="play-button">
+            <img src="images/gifs/rock.gif" alt="rock">
+            </button>
+            <button onclick = " playRPS('Paper') "
+            class="play-button">
+            <img src="images/gifs/paper.gif" alt="paper">
+            </button>
+            <button onclick = " playRPS('Scissor') "
+            class="play-button">  
+            <img src="images/gifs/scissor.gif" alt="scissor">
+            </button>
+    </div>
+        <!-- play buttons end  -->
+        <!-- result starts -->
+    <div id="result-of-move">
+        <p id = "result"></p>
+        <p id = "moveset"></p>
+    </div>
+        <!-- result ends -->
+    <p id = "score-tally"> <span>Wins : 0</span> <span>Losses : 0</span>  <span>Ties : 0</span> </p>
+    <div class="reset-button">
+        <button onclick = " update(0,0,0) ">Reset Score</button>
+    </div>      
+    <script src="main.js"> </script>
+</body>
+</html>

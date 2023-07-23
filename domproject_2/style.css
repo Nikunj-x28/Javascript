@@ -1,0 +1,75 @@
+body{
+    background-color: rgb(25,25,25);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    text-align: center;
+    font-size: 60px;
+}
+/* player move stylings */
+.container{
+    display: flex;
+    justify-content: space-around;
+    margin-top:100px;
+}
+.play-button{
+   height: 400px;
+   width: 400px;
+   background-color: transparent;
+   border: none;
+}
+.play-button img{
+   height: 100%;
+   max-width:100%;
+   border-radius:50%;
+   cursor: pointer;
+}
+/* end */
+
+/*  result portion styling  */
+.show-result{
+    margin-top: 30px;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+    gap: 10px;
+}
+.move-icon{
+    height: 250px;
+    max-width:250px;
+ }
+/* end */
+
+/* score tally styling  */
+#score-tally{
+    font-size: 40px;
+    background-color: #ADCAEB;
+    color: rgb(25,25,25);
+    padding: 10px;
+    border-radius: 30px;
+    margin-inline:25%;
+    margin-top: 50px;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* end */
+
+/* reset button styling */
+.reset-button{
+    margin-top: 50px;
+    display:flex;
+    justify-content:flex-end;
+    align-items: center;
+    height: 50px;
+}
+.reset-button button{
+    font-size:30px;
+    padding: 15px 20px;
+    cursor: pointer;
+    margin-right: 10%;
+}
+/* end */
