@@ -40,20 +40,31 @@ function computerMove(){
     }
 }
 function displayRes(result,playerMove,compMove){
-    document.querySelector('#result-of-move').classList.add('show-result')
     if(result === 'tie'){
-        document.getElementById('result').innerHTML='Game was Tied 🙂🙂';
+        var classListElm = document.getElementById('result').classList;
+        while(classListElm.length > 0){
+            classListElm.remove(classListElm.item(0));
+        }
+        document.getElementById('result').classList.add('result-box','tie');
+        document.getElementById('result').innerHTML='Game was Tied';
     }
     else if(result === 'win'){
-        document.getElementById('result').innerHTML='You Won 😎😎';
+        var classListElm = document.getElementById('result').classList;
+        while(classListElm.length > 0){
+            classListElm.remove(classListElm.item(0));
+        }
+        document.getElementById('result').classList.add('result-box','win');
+        document.getElementById('result').innerHTML='You Won';
     }
     else {
-        document.getElementById('result').innerHTML='You Lost 😣😣';
+        var classListElm = document.getElementById('result').classList;
+        while(classListElm.length > 0){
+            classListElm.remove(classListElm.item(0));
+        }
+        document.getElementById('result').classList.add('result-box','loss');
+        document.getElementById('result').innerHTML='You Lost';
     }
-    document.getElementById('moveset').innerHTML=`You chose :
-    <img src="images/${playerMove}.jpeg" alt ="${playerMove}" class="move-icon">
-    computer chose :    
-    <img src="images/${compMove}.jpeg" alt ="${compMove}" class="move-icon">`;
+    
 }
 function update(win,loss,tie){
     const tally = document.getElementById('score-tally');
