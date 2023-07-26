@@ -81,3 +81,48 @@ h1{
     margin-right: 10%;
 }
 /* end */
+
+/* for mobiles */
+@media (max-width:500px){
+    h1{
+        font-size:30px;
+    }
+    .play-button{
+        height: 200px;
+        width: 200px;
+     }
+    .container{
+        margin-top:40px;
+    }
+    .result-box{
+        font-size: 20px;
+        padding:2px 5px;
+        margin-inline:30%;
+        margin-top: 20px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    #score-tally{
+        font-size: 20px;
+        background-color: #ADCAEB;
+        color: rgb(25,25,25);
+        padding: 10px;
+        border-radius: 30px;
+        margin-inline:10%;
+        margin-top: 30px;
+    }
+    .reset-button{
+        margin-top:20px;
+        display:flex;
+        justify-content:flex-end;
+        align-items: center;
+        height: 20px;
+    }
+    .reset-button button{
+        font-size:12px;
+        padding: 3px 5px;
+        cursor: pointer;
+        margin-right: 10%;
+    }
+
+}
