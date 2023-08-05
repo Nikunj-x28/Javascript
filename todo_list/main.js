@@ -1,4 +1,5 @@
-const todoList =[];
+const todoList = JSON.parse(localStorage.getItem("ourList")) ||[];
+displayList();
 function addTodo(){
     let task=document.querySelector('.js-task');
     let taskDate=document.querySelector('.js-date');
@@ -7,8 +8,8 @@ function addTodo(){
     task.value='';
     taskDate.value='';
     displayList();
+    updatelocal();
 }
-
 function displayList(){
     let showlist='';
     for(let i =0;i<todoList.length; i++){
@@ -20,7 +21,11 @@ function displayList(){
         onclick="
         todoList.splice(${i},1);
         displayList();
+        updatelocal();
         ">Delete</button></div>`;
     }
     document.querySelector('.js-list').innerHTML=showlist;
+}
+function updatelocal(){
+    localStorage.setItem("ourList",JSON.stringify(todoList));
 }
