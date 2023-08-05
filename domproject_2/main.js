@@ -9,6 +9,21 @@ const moves = new Map(
     ['RockPaper',0]
     ]
 );
+let id;
+let isPlaying =false;
+function autoplay(){
+    if(!isPlaying){
+        const playerMove = computerMove();
+        id = setInterval(function(){
+           playRPS(playerMove);
+        },1000);
+        isPlaying=true;
+    }
+    else{
+        clearInterval(id);
+        isPlaying = false;
+    }
+}
 function playRPS(playerMove){
     let compMove = computerMove();
     if(compMove == playerMove){
@@ -69,4 +84,16 @@ function displayRes(result,playerMove,compMove){
 function update(win,loss,tie){
     const tally = document.getElementById('score-tally');
     tally.innerHTML = `<span>Wins : ${win}</span>  <span>Losses : ${loss}</span> <span>Ties : ${tie}</span>`;
+}
+function reset(){
+    const tally = document.getElementById('score-tally');
+    win = 0;
+    loss = 0;
+    tie = 0;
+    tally.innerHTML = `<span>Wins : ${win}</span>  <span>Losses : ${loss}</span> <span>Ties : ${tie}</span>`;
+    var classListElm = document.getElementById('result').classList;
+    while(classListElm.length > 0){
+        classListElm.remove(classListElm.item(0));
+    }
+    document.getElementById('result').innerHTML='';
 }
