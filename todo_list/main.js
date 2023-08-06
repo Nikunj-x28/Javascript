@@ -1,5 +1,9 @@
 const todoList = JSON.parse(localStorage.getItem("ourList")) ||[];
 displayList();
+document.querySelector('.todo-button').
+    addEventListener('click',() =>{
+        addTodo();
+    })
 function addTodo(){
     let task=document.querySelector('.js-task');
     let taskDate=document.querySelector('.js-date');
@@ -18,13 +22,16 @@ function displayList(){
         <div>${listElm.name} </div>
         <div>${listElm.dueDate} </div>
         <div> <button class="delete-button"
-        onclick="
-        todoList.splice(${i},1);
-        displayList();
-        updatelocal();
-        ">Delete</button></div>`;
+        >Delete</button></div>`;
     }
     document.querySelector('.js-list').innerHTML=showlist;
+    document.querySelectorAll('.delete-button').forEach((deleteButton, index) =>{
+        deleteButton.addEventListener('click',() =>{
+            todoList.splice(index,1);
+            displayList();
+            updatelocal();
+        })
+    })
 }
 function updatelocal(){
     localStorage.setItem("ourList",JSON.stringify(todoList));
