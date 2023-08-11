@@ -25,6 +25,11 @@ body{
     height: 120px;
     border-radius: 20px;
     margin-bottom: 50px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
 }
 .calc-button{
     border-radius: 12px;
@@ -32,7 +37,7 @@ body{
     cursor:pointer;
     font-weight: 700;
     padding:10%;
-    border:2px solid #E6EBDC;
+    border: none;
     box-shadow: 0px 4px gray;
 }
 .reset-button , .result-button{
@@ -41,18 +46,32 @@ body{
 /* upr ka toggle  */
 .div-top{
     display: flex;
+    justify-content: space-between;
     width:430px;
-}
-.logo{
-    justify-self: flex-start;
-    align-self: flex-end;
-    color: white;
+
     font-size: 30px;
+    color: white;
 }
+/* .logo{
+    
+    
+} */
 .toggle{
-    /* justify-self:flex-end;
-     */
-     font-size: 40px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 15px;
 }
+.toggle span{
+    border-radius: 15px;
+    background-color:hsl(224,36%,15%);
+    padding: 5px 5px;
+}
+.reset-button , .del-button{
+    background-color: rgb(133, 193, 190);
+}
+.result-button{
+    background-color: rgb(229, 106, 61);
+}
+
+  
 
 
