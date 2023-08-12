@@ -1,0 +1,23 @@
+  body {
+    background-color:white;
+  }
+  .main-container{
+    background-color:hsl(291, 45%, 38%);
+    color: white;
+  }
+  .result{
+    background-color:hsl(207, 47%, 52%);
+    color: black;
+  }
+  .div-top{
+    color: black;
+  }
+  .calc-button{
+    box-shadow: 0px 4px gray;
+  }
+  .reset-button ,.del-button{
+    background-color: rgb(123, 229, 121);
+  }
+  .result-button{
+    background-color: rgb(89, 54, 244);
+  }

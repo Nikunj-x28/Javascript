@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" id="switcher-id" href="">
 </head>
 <body>
             <div class="div-top">
                  <div class="logo">calc</div>
                  <div class="toggle">
-                    <p>THEME
-                    <span>
-                        <input type="radio" name="theme" id="theme1">
-                        <input type="radio" name="theme" id="theme2">
-                        <input type="radio" name="theme" id="theme3">
-                    </span>
-                    </p>
+                        THEME
+                        <div class="theme-switches">
+                            <div data-theme="light"  class="switch" id="switch-1"></div>
+                
+                            <div data-theme="cool" class="switch" id="switch-2"></div>
+                
+                            <div data-theme="purple" class="switch" id="switch-3"></div>
+                        </div>
                 </div>
             </div>
             <p class="result"></p>
