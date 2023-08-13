@@ -1,23 +1,50 @@
 body {
-    background-color: hsl(222,26%,31%);
+    background-color: #120832;
   }
   .main-container{
     background-color:hsl(223,31%,20%);
     color: white;
   }
   .result{
-    background-color:hsl(224,36%,15%);
+    background-color:hsl(223,31%,20%) ;
+    box-shadow: 0 0 50px #2dd9fe, 
+    inset 0 0 50px #00a3d5;
     color: white;
   }
   .div-top{
     color: white;
   }
   .calc-button{
-    box-shadow: 0px 4px gray;
+    box-shadow: 0 0 50px #FF5161,
+    0 5px rgb(236, 230, 230), 
+    inset 0 0 50px #D30302;
   }
   .reset-button ,.del-button{
-    background-color: rgb(66, 217, 205);
+    box-shadow: 0 0 50px  #9461fd, 
+    0 5px rgb(236, 230, 230),
+    inset 0 0 50px #4003e6;
   }
   .result-button{
-    background-color: orangered;
+    box-shadow: 0 0 50px  #FF53cd, 
+    0 5px rgb(236, 230, 230),
+    inset 0 0 50px #e10361;
   }
+  .calc-button:active {
+    box-shadow: 0 0 50px #FF5161,
+    0 2px rgb(236, 230, 230), 
+    inset 0 0 50px #D30302;
+    transform: translateY(4px);
+  }
+  .reset-button:active ,.del-button:active{
+    box-shadow: 0 0 50px  #9461fd, 
+    0 5px rgb(236, 230, 230),
+    inset 0 0 50px #4003e6;
+    transform: translateY(4px);
+  }
+  .result-button:active{
+    box-shadow: 0 0 50px  #FF53cd, 
+    0 5px rgb(236, 230, 230),
+    inset 0 0 50px #e10361;
+    transform: translateY(4px);
+  }
+  

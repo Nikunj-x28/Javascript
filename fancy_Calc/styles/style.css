@@ -1,7 +1,7 @@
 :root {
-    --light: white;
-    --cool: hsl(6,63%,50%);
-    --neon: #80669d;
+    --light: #80669d;
+    --cool:  #f67280;
+    --neon: #64376d;
 } 
 body{
     display: flex;
@@ -48,7 +48,6 @@ body{
 .reset-button , .result-button{
     grid-column:span 2;
 }
-
 /* top of calculator  */
 .div-top{
     display: flex;

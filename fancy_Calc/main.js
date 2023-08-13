@@ -1,17 +1,15 @@
 let result = localStorage.getItem('calculation') || '';
+displayResult();
 let style = localStorage.getItem('style') || 'light';
 setTheme(style);
-displayResult();
 let switches = document.getElementsByClassName('switch');
-setInterval(()=>{
-    switches.forEach((themeSwitch)=>{
-        themeSwitch.addEventListener('click', function () {
-            let theme = this.dataset.theme;
+// let switchArray = Array.from(switches);
+for(let i=0;i<switches.length;i++){
+    switches[i].addEventListener('click',() => {
+            let theme =switches[i].dataset.theme;
             setTheme(theme);
-        });
-})
-},100)
-
+    });
+}
 document.querySelectorAll('.calc-button').forEach((calcButton, index) =>{
     calcButton.addEventListener('click',() =>{
         if(calcButton.innerHTML.length === 1 && calcButton.innerHTML != '=')
@@ -19,8 +17,13 @@ document.querySelectorAll('.calc-button').forEach((calcButton, index) =>{
     })
 })
 function updateResult(value){
-    if(result.length == 21){
-        alert('Sorry the calculator is fancy but it cant handle such large numbers')
+    if(result.length === 21){
+        let temp=result;
+        result = 'Out of Bounds';
+        displayResult();
+        result=temp;
+        setTimeout(()=>{
+            displayResult();},1000);
     }
     else{
         if(value === 'x') value = '*';
@@ -47,17 +50,23 @@ resetButton.addEventListener('click',()=>{
     displayResult();
 })
 function expressionEval(){
-    result=eval(result);
-    localStorage.setItem('calculation',result);
-    displayResult();
+    try{
+        if(result.length === 0){
+            return;
+        }
+        result=eval(result);
+        localStorage.setItem('calculation',result);
+        displayResult();
+    }
+    catch{
+        result='Error !!';
+        displayResult();
+        result='';
+        setTimeout(()=>{
+        displayResult();},1000);
+    }
 }
 function setTheme(theme){
-      if (theme == 'light') {
-        document.getElementById('switcher-id').href = 'styles/light.css';
-      } else if (theme == 'cool') {
-        document.getElementById('switcher-id').href = 'styles/cool.css';
-      } else if (theme == 'neon') {
-        document.getElementById('switcher-id').href = 'styles/neon.css';
-      }
-      localStorage.setItem('style', theme);
+      document.getElementById('switcher-id').href = `styles/${theme}.css`;
+      localStorage.setItem('style',theme);
 }

@@ -1,23 +1,27 @@
 body {
-    background-color: hsl(222,26%,31%);
+    background-color: #6c5b7c;;
   }
   .main-container{
-    background-color:hsl(223,31%,20%);
+    background-color:#c06c84;
     color: white;
   }
   .result{
-    background-color:hsl(224,36%,15%);
+    background-color:#f67280;
     color: white;
   }
   .div-top{
     color: white;
   }
   .calc-button{
-    box-shadow: 0px 4px gray;
+    box-shadow: 0px 5px rgba(169, 169, 169, 0.992);
   }
   .reset-button ,.del-button{
-    background-color: rgb(66, 217, 205);
+    background-color: #f8b595;
   }
   .result-button{
-    background-color: orangered;
+    background-color: rgb(201, 196, 196);
+  }
+  .pressEffect:active{
+    box-shadow: 0px 2px gray;
+    transform: translateY(4px);
   }
