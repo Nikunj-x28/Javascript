@@ -40,6 +40,12 @@ body {
     50%{background-position:100% 24%}
     100%{background-position:0% 77%}
 }
+@media only screen and (max-width: 600px) {
+    .main{
+        width:80%;
+        margin-inline:10%; 
+    }
+  }
 /* weather heading */
 .heading{
     font-size:30px;
@@ -70,13 +76,21 @@ body {
 /* weather results */
 .results{
     height: 200px;
+    margin-bottom: 1.5rem; 
 }
 #weather-icon img{
-    height: 120px;
-    width: 120px;
+    height: 140px;
+    width: auto;
 }
-/* weather deatails */
+/* weather details */
 .details{
     display: flex;
     justify-content:space-evenly;
+}
+.image img{
+    height:50px;
+    width:50px;
+}
+.box{
+    padding: 0;
 }
