@@ -8,7 +8,7 @@
         justify-content:space-evenly;
         align-items: center;
         min-height: 100vh;
-        color: #0c67ae;
+        color: #460061 ;
         font-family:Arial, Helvetica, sans-serif;
     }
 }
@@ -17,7 +17,7 @@ main{
     justify-content:space-evenly;
     align-items: center;
     min-height: 100vh;
-    color: #0c67ae;
+    color: #460061 ;
     font-family:Arial, Helvetica, sans-serif;
 }
 
@@ -29,7 +29,7 @@ main{
     align-items:center;
 }
 .play{
-    color:#460061;
+    color:#0c67ae;
 }
 .page{
     width:10rem;
@@ -52,24 +52,24 @@ main{
 }
 .box{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,1fr);
-    width: 48vmin;
-    height:48vmin;
-    outline:#0c67ae solid 4px;
-    background-color: lightblue;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5,1fr);
+    width: 60vmin;
+    height:60vmin;
+    outline: #460061 solid 4px;
+    background-color: rgb(227, 179, 225);
     margin-bottom: 1rem;
 }
 .box img{
-    width: 16vmin;
-    height:16vmin;
-    border-right:1px solid lightblue ;
-    border-bottom:1px solid lightblue;
+    width: 12vmin;
+    height:12vmin;
+    border-right:1px solid #b997c7 ;
+    border-bottom:1px solid #b997c7;
 }
 #start-js{
-    background-color: #0c67ae ;
+    background-color: #460061 ;
     color: white;
-    border-color: lightblue;
+    border-color: rgb(227, 179, 225);
     border-radius: 5px;
     padding: 0.4rem 1.8rem;
     font-size: 15px;
