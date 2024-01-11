@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play the Music</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="controls">
+            <div class="column">
+                <span>Volume</span>
+                <input type="range" min="0" max="1" value="0.4" step="any" id="volume">
+            </div>
+            <div class="column">
+                <span>Show Keys</span>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+        <div class="pianobox">
+            <div class="key white" id="a"><span>a</span></div>
+            <div class="key black" id="w"><span>w</span></div>
+            <div class="key white" id="s"><span>s</span></div>
+            <div class="key black" id="e"><span>e</span></div>
+            <div class="key white" id="d"><span>d</span></div>
+            <div class="key white" id="f"><span>f</span></div>
+            <div class="key black" id="t"><span>t</span></div>
+            <div class="key white" id="g"><span>g</span></div>
+            <div class="key black" id="y"><span>y</span></div>
+            <div class="key white" id="h"><span>h</span></div>
+            <div class="key black" id="u"><span>u</span></div>
+            <div class="key white" id="j"><span>j</span></div>
+            <div class="key white" id="k"><span>k</span></div>
+            <div class="key black" id="o"><span>o</span></div>
+            <div class="key white" id="l"><span>l</span></div>
+            <div class="key black" id="p"><span>p</span></div>
+            <div class="key white" id="b"><span>b</span></div>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
