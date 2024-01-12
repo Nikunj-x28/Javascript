@@ -1,0 +1,28 @@
+.popup{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+    height:80px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+#magic-button {
+    width: 40%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db; /* Blue background color */
+    color: #fff; /* White text color */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#magic-button:hover {
+    background-color: #8fbef0; /* Light gray background color on hover */
+}
+
+#magic-button:active {
+    background-color: #8fbef0; /* Slightly darker gray background color on press */
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5); /* Press effect with shadow */
+}
